@@ -149,22 +149,22 @@
     border-radius: 50%;
  
  }
- 
- .top__container{
+  /* CODE CHÍNH */
+ .baiviet_top__container{
     padding-top: 66px;
     height: 240px;
     background-image: url("https://c4.wallpaperflare.com/wallpaper/382/553/153/circuits-board-wallpaper-thumb.jpg");
  }
- .top__container a:hover{
+ .baiviet_top__container a:hover{
       background-color: #4095da;
  }
- .top__container h1{
+ .baiviet_top__container h1{
     margin-top: 60px;
     margin-left: 40px;
     color: #fff;
 
  }
- .top__container p{
+ .baiviet_top__container p{
     margin-left: 40px;
     color: #fff;
  }
@@ -188,18 +188,18 @@
     font-size: 14px;
 
  }
-.container_main{
+.baiviet_container_main{
     margin-left: 40px;
     margin-right: 40px;
    
 }
- .mid__container{
+ .baiviet_mid__container{
     width: 86%;
     display: flex;
     margin: 10px auto;
     height: calc(100% - 306px);
  }
-.t1{
+.baiviet_t1{
     padding: 10px;
     margin-top: 30px;
     background-color: rgb(255, 255, 255);
@@ -207,17 +207,17 @@
     border:#fff; 
     width: 100%;
 }
-.mid__container_menu{
+.baiviet_baiviet_mid__container_menu{
     width: 98%;
     margin-right: 150px;
 }
-.nut_dropdown {
+.baiviet_nut_dropdown {
    color: rgb(247, 2, 2);
    background-color: #e4dede;
    font-size: 10px;
    border: none;
  }
-.noidung_dropdown {
+.baiviet_noidung_dropdown {
    /*Ẩn nội dung các đường dẫn*/
    display: none;
    border: none;
@@ -244,13 +244,13 @@
 
  
 
-.mid__container .mid__container_menu ul{
+.baiviet_mid__container .baiviet_mid__container_menu ul{
     background-color: #e4dede;
     margin: 20px  auto;
     margin-left: -85px;
 }
 
-.mid__container_menu li{
+.baiviet_mid__container_menu li{
     display: inline-block;
     text-align: center;
     width: 150px;
@@ -258,23 +258,23 @@
     line-height: 40px;
     position: relative;
 }
-.mid__container_menu li a{
+.baiviet_mid__container_menu li a{
     text-decoration: none;
     color: #2d3238;
     display: block;
     font-size: 16px;
 }
-.mid__container_menu li a:hover{
+.baiviet_mid__container_menu li a:hover{
     color: rgb(16, 116, 184);
     background-color: #ffffff;
     cursor: pointer;
 }
-/* .mid__container .select{
+/* .baiviet_mid__container .select{
     text-align: center;
     float: right;
     margin-right: 0;
 } */
-.mid__container > .mid__container_right{
+.baiviet_mid__container > .baiviet_mid__container_right{
     margin: 10px 10px;
  
 
@@ -401,7 +401,7 @@ a{
    float: left;
 }
 
-mid__container > .mid__container_right{
+baiviet_mid__container > .baiviet_mid__container_right{
    margin: 10px 10px;
 
 
@@ -443,7 +443,7 @@ mid__container > .mid__container_right{
 .text-muted {
    color: #707070!important;
 }
-.mid__container_right2{
+.baiviet_mid__container_right2{
    display: inherit;  
    
 }

@@ -1,216 +1,488 @@
 *{
    
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
- }
- 
- .main{
-    font-family: 'Google Sans',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
- }
- 
- .header{
-    width: 220px;
-    background-color: #343a40;
-    height: 100%;
-    position: fixed;
- }
- 
- .header__img-logo{
-    height: 66px;
-    display: flex;
-    background-color: #343a40;
- }
- .header__img-user{
-    height: 136px;
-    background-color: #2d3238;
-    text-align: center;
-    
- }
- .header__img-user p{
-    color: #eaecee !important;
-    padding-top: 12px;
-    font-size: 14px;
-    font-weight: 600;
- }
- 
- .header__img-logo img.img-logo{
-    height: 40px;
-    margin: auto;
-    color: #fff;
- }
- 
- .header__img-user img.img-user{
-    height: 60px;
-    border-radius: 50%;
-    margin-top: 22px;
- }
- 
- .icon-clok {
-    font-size: 16px;
-    color: #d5d8da;
-    padding: 0 8px 0 16px;
- }
- 
- #nav{
-    margin-top: 16px;
-    
- }
- 
- #nav li:hover{
-    background-color: #2d3238;
- }
- 
- #nav li:hover a{
-    color: #4095da;
- }
- #nav li{
-    display: flex;
-    padding: 10px 0;
-    margin: 5px;
- }
- #nav li a {
-    text-decoration: none;
-    color: #959a9e;
-    display: block;
-    flex: 1;
-    font-weight: 700;
-    font-size: 14px;
- }
- #nav .list-page h1{
-    font-size: 12px;
-    color: #8a8e92;
-    padding-top: 26px;
-    padding-left: 16px ;
- }
- #nav .list-page{
-    height: 48px;
- }
- 
- /* Container */
- .container{
-    padding-left: 220px;
-   
-    background-color: #e7e9ec;
- }
- 
- 
- .header__container{
-    height: 66px;
-    position: fixed;
-    margin-bottom: 50px 0 0;
-    width: calc(100% - 220px);
-    background-color: #343a40;
-    animation: dichchuyen ease ;
- }
- @keyframes dichchuyen{
-    form{
-        
-        opacity: 0;
-    }
-    to{
-        
-        opacity: 1;
-        
-    }
- }
- 
- 
- .header__container-icon{
-    margin: 0 70px;
-    display: flex;
-    line-height: 66px;
-    justify-content: space-between;
-    
- }
- 
- .header__container img.img-user{
-    height: 30px;
-    border-radius: 50%;
-    align-items: center;
-    border: 3px solid #4d3b72;
- }
- 
- .header__container-icon .list-icon{
-   
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.main{
+   font-family: 'Google Sans',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.header{
+   width: 220px;
+   background-color: #343a40;
+   height: 100%;
+   position: fixed;
+}
+
+.header__img-logo{
+   height: 66px;
    display: flex;
-   margin: 18px 0;
- }
- 
- .list-icon icon{
-    margin: 0 4px;
- }
- .header__container-icon .icon{
-    color: #fff;
-    padding: 8px 8px;
-    margin-right: 18px;
-    
- }
- .header__container-icon .icon:hover{
-    background-color: #2d3238;
-    border-radius: 50%;
- 
- }
- 
- .top__container{
-    background-image:url(http://pik.vn/2015e55b8d45-604e-45fe-828c-ceb39bf0f6eb.jpeg) !important;
-    padding-top: 66px;
-    height: 240px;
- }
- 
- .top__container a:hover{
-      background-color: #4095da;
- }
-
- .top__container h1{
-     text-align: center;
-    margin-top: 60px;
-    margin-left: 40px;
-    color: #fff;
-
- }
- .top__container p{
-    margin-left: 40px;
-    text-align: center;
-    color: #fff;
- }
- .btn{
-    float: right;
-    display: inline-block;
-    border: 2px solid transparent;
-     background-color: #1131e2;
-     color: #e7e9ec;
-     text-decoration: none;
-     display: inline-block;
-     margin-bottom: 50px;
-     margin-right: 50px;
-     height: 34px;
-     font-weight: 700;
-     line-height: 32px;
-     border-radius: 25rem; 
-     padding: 0px 8px;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-    font-size: 14px;
-
- }
- .container_main{
-    margin-left: 40px;
-    margin-right: 40px;
+   background-color: #343a40;
+}
+.header__img-user{
+   height: 136px;
+   background-color: #2d3238;
+   text-align: center;
    
 }
- .mid__container{
-    width: 86%;
+.header__img-user p{
+   color: #eaecee !important;
+   padding-top: 12px;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.header__img-logo img.img-logo{
+   height: 40px;
+   margin: auto;
+   color: #fff;
+}
+
+.header__img-user img.img-user{
+   height: 60px;
+   border-radius: 50%;
+   margin-top: 22px;
+}
+
+.icon-clok {
+   font-size: 16px;
+   color: #d5d8da;
+   padding: 0 8px 0 16px;
+}
+
+#nav{
+   margin-top: 16px;
+   
+}
+
+#nav li:hover{
+   background-color: #2d3238;
+}
+
+#nav li:hover a{
+   color: #4095da;
+}
+#nav li{
+   display: flex;
+   padding: 10px 0;
+   margin: 5px;
+}
+#nav li a {
+   text-decoration: none;
+   color: #959a9e;
+   display: block;
+   flex: 1;
+   font-weight: 700;
+   font-size: 14px;
+}
+#nav .list-page h1{
+   font-size: 12px;
+   color: #8a8e92;
+   padding-top: 26px;
+   padding-left: 16px ;
+}
+#nav .list-page{
+   height: 48px;
+}
+
+/* Container */
+.container{
+   padding-left: 220px;
+   background-color: #e7e9ec;
+}
+.kter_container_main{
+   margin-left: 40px;
+   margin-right: 40px;
+  
+}
+
+.header__container{
+   height: 66px;
+   position: fixed;
+   margin-bottom: 50px 0 0;
+   width: calc(100% - 220px);
+   background-color: #343a40 ;
+   animation: dichchuyen ease ;
+   position: fixed;  
+    z-index: 10;
+}
+/* { sua loi menu hien tren
+   position: fixed;  
+    z-index: 10;
+} */
+@keyframes dichchuyen{
+   form{
+       
+       opacity: 0;
+   }
+   to{
+       
+       opacity: 1;
+       
+   }
+}
+
+
+.header__container-icon{
+   margin: 0 70px;
+   display: flex;
+   line-height: 66px;
+   justify-content: space-between;
+}
+
+.header__container img.img-user{
+   height: 30px;
+   border-radius: 50%;
+   align-items: center;
+   border: 3px solid #4d3b72;
+}
+
+.header__container-icon .list-icon{
+  
+  display: flex;
+  margin: 18px 0;
+}
+
+.list-icon icon{
+   margin: 0 4px;
+}
+.header__container-icon .icon{
+   color: #fff;
+   padding: 8px 8px;
+   margin-right: 18px;
+   
+}
+.header__container-icon .icon:hover{
+   background-color: #2d3238;
+   border-radius: 50%;
+
+}
+
+.input-group{
+   display: flex;
+   margin-top: 2%;
+ 
+
+}
+
+.input-seach{
+   display: block;
+   height: 40px;
+   padding: 9px 18px;
+   border-radius: 0.3rem;
+   position: relative;
+   width: 96%;
+    margin-bottom: 0;
+    color: #575757;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #dcdfe3;
+   
+}
+.thanhvien{
+    font-size: 1.142857rem;
+    line-height: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+.thanhvien .btn{
+   color: #212529;
+   background-color: #f5f6f7;
+   border-color: #d3d7dc;
+   height: 45%;
+   width: 50px;
+   margin-right: 0px;
+} 
+.kter_container_mid{
+   background-color: #fff;
+   width: 94%;
+   margin-left: 3%;
+   margin-top: -1%;
+}
+.kter_container_mid_user .kter_heal_mid_user{
+   display: flex;
+   background-color: #cfd2d4;
+   padding: 10px 0px;
+    list-style: none;
+  
+} 
+.kter_heal_mid_user ul{
+  padding: 10px 50px;
+}
+.kter_heal_mid_user ul li{
+   display: inline-block ;
+   text-align: left;
+   width: 100px;
+   height: 20px;
+   line-height: 20px;
+   margin-left: -5px;
+   position: relative;
+  
+}
+.kter_heal_mid_user ul li a{
+   text-decoration: none;
+   text-align: center;
+   color: #000000;
+   font-weight: bold;
+}
+.kter_heal_mid_user li a:hover{
+   color: #4095da;
+}
+.mid_user{
+   margin-top: 3%;
+   margin-left: 2%;
+   margin-right: 2%; 
+  
+}
+.kter_center_user{
+   display: flex;
+  margin-left:  1%;
+}
+.media{
+   flex: 0 0 50%;
+   position: relative;
+    min-height: 1px;
     display: flex;
-    margin: 10px auto;
-    height: calc(200vh - 306px);
- }
+    padding: 20px 10px;
+    margin-bottom: 0;
+
+   
+}
+.user_1 :hover{
+   background-color: #c7cbcf;
+}
+.user_1{
+   width: 40%;
+   padding: 5px 20px;
+}
+.media a{
+   text-decoration: none;
+    background-color: transparent;
+    color: #2e69ff;
+}
+.media img{
+   width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(147 112 219 / 50%);
+}
+.media .media-body{
+   margin-left: 10px;
+   margin-top: -2%;
+}
+ /* CODE CHÍNH */
+.kter_top__container{
+   padding-top: 66px;
+   margin-bottom: 10px;
+   height: 240px;
+   background-image: url("https://www.howkteam.vn/Content/images/banner/map.jpg");
+}
+.kter_top__container a:hover{
+     background-color: #4095da;
+}
+.kter_top__container h1{
+   margin-top: 60px;
+   margin-left: 40px;
+   color: #fff;
+
+}
+.kter_top__container p{
+   margin-left: 40px;
+   color: #fff;
+}
 .t1{
-    padding: 10px;
-    margin-top: 30px;
-    background-color: rgb(255, 255, 255);
-    font-size: 15px;
-    border:#fff; 
+   padding: 10px;
+   margin-top: 30px;
+   background-color: rgb(255, 255, 255);
+   font-size: 15px;
+   border:#fff; 
+}
+.btn{
+   float: right;
+   border: 2px solid transparent;
+    background-color: #1131e2;
+    color: #e7e9ec;
+    text-decoration: none;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    height: 34px;
+    font-weight: 700;
+    line-height: 32px;
+    border-radius: 50%; 
+    padding: 0px 8px;
+   border-top-left-radius: 0.25rem;
+   border-top-right-radius: 0.25rem;
+   border-bottom-right-radius: 0.25rem;
+   border-bottom-left-radius: 0.25rem;
+   font-size: 14px;
+
+}
+.footer{
+   
+   margin-left: 15%;
+   background-color: #ffffff;
+ 
+}
+.footer .logo{
+ margin: 20px 0 20px 20px;
+   height: 60px;
+   display: flex;
+  
+}
+.colum{
+   display: flex;
+   
+}
+.colum ul{
+   margin-top: 0;
+   margin-bottom: 1rem;
+   padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    
+    text-align: left;
+    margin-left: 10px;
+}
+.colum p{
+   margin-top: 0;
+   margin-bottom: 1rem;
+   padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    text-align: left;
+    
+}
+.colum li {
+   list-style: none;
+}
+
+.colum .icon{
+   -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-family: 'Font Awesome 5 Brands';
+    font-size: 2em;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+.colum li a{
+   color: #575757;
+   text-decoration: none;
+}
+.colum li a:hover{
+   color: red;
+}
+.colum p{
+   font-size: 16px;
+     font-weight: bold !important;
+}
+.colum img{
+   margin-left: 25px;
+}
+.mb-10{
+   margin-bottom: 10px!important;
+   margin-left: 10px;
+}
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+
+.pagination-container {
+  margin-top: 1em;
+  
+  border-top: 1px solid #d7dadb;
+  border-bottom: 1px solid #d7dadb;;
+  text-align: left;
+  font-size: 10px;
+  
+}
+
+.pagination-item {
+  list-style-type: none;
+  display: inline-block;
+  border-right: 1px solid #d7dadb;
+  transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
+}
+.pagination-item  :active{
+   background-color: red;
+}
+
+.pagination-item:hover,
+.pagination-item.is-active {
+      background-color: #fa4248;
+      border-right: 1px solid #fff;
+      
+}
+
+.pagination-item.first-number {
+  border-left: 1px solid #d7dadb;
+}
+
+.pagination-link {
+  padding: 1.1em 1.6em;
+  display: inline-block;
+  text-decoration: none;
+  color: #292a2b;
+
+  transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(20deg) skewY(0deg);
+}
+
+.pagination-item--wide {
+
+  list-style-type: none;
+  display: inline-block;
+}
+
+.pagination-item--wide.first {
+  margin: 0 1em 0 0;
+}
+
+.pagination-item--wide.last {
+  margin: 0 0 0 1em;
+}
+
+.pagination-link--wide {
+  text-decoration: none;
+  color: #292b2c;
+  padding: 1.1em 1.6em;
+}
+
+.pagination-link--wide:hover {
+  color: #fa4248;
+}
+
+.pagination-link--wide.first:before,
+.pagination-link--wide.last:after {
+  font-family: 'entypo';
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pagination-link--wide.first::before {
+  content: "\E765";
+  margin-right: 0.5em;
+}
+
+.pagination-link--wide.last::after {
+  content: "\E766";
+  margin-left: 0.5em;
 }

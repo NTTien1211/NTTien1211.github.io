@@ -1,0 +1,668 @@
+*{
+   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .main{
+    font-family: 'Google Sans',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ }
+ 
+ .header{
+    width: 220px;
+    background-color: #343a40;
+    height: 100%;
+    position: fixed;
+ }
+ 
+ .header__img-logo{
+    height: 66px;
+    display: flex;
+    background-color: #343a40;
+ }
+ .header__img-user{
+    height: 136px;
+    background-color: #2d3238;
+    text-align: center;
+    
+ }
+ .header__img-user p{
+    color: #eaecee !important;
+    padding-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+ }
+ 
+ .header__img-logo img.img-logo{
+    height: 40px;
+    margin: auto;
+    color: #fff;
+ }
+ 
+ .header__img-user img.img-user{
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 22px;
+ }
+ 
+ .icon-clok {
+    font-size: 16px;
+    color: #d5d8da;
+    padding: 0 8px 0 16px;
+ }
+ 
+ #nav{
+    margin-top: 16px;
+    
+ }
+ 
+ #nav li:hover{
+    background-color: #2d3238;
+ }
+ 
+ #nav li:hover a{
+    color: #4095da;
+ }
+ #nav li{
+    display: flex;
+    padding: 10px 0;
+    margin: 5px;
+ }
+ #nav li a {
+    text-decoration: none;
+    color: #959a9e;
+    display: block;
+    flex: 1;
+    font-weight: 700;
+    font-size: 14px;
+ }
+ #nav .list-page h1{
+    font-size: 12px;
+    color: #8a8e92;
+    padding-top: 26px;
+    padding-left: 16px ;
+ }
+ #nav .list-page{
+    height: 48px;
+ }
+ 
+ /* Container */
+ .Vekteam_container{
+    padding-left: 220px;
+    background-color: #e7e9ec;
+ }
+ .Vekteam_container_main{
+    margin-left: 40px;
+    margin-right: 40px;
+   
+}
+ 
+ .Vekteam_header__container{
+    height: 66px;
+    position: fixed;
+    margin-bottom: 50px 0 0;
+    width: calc(100% - 220px);
+    background-color: #343a40 ;
+    animation: dichchuyen ease ;
+ }
+ @keyframes dichchuyen{
+    form{
+        
+        opacity: 0;
+    }
+    to{
+        
+        opacity: 1;
+        
+    }
+ }
+ 
+ 
+ .Vekteam_header__container-icon{
+    margin: 0 70px;
+    display: flex;
+    line-height: 66px;
+    justify-content: space-between;
+ }
+ 
+ .Vekteam_header__container img.img-user{
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    border: 3px solid #4d3b72;
+ }
+ 
+ .Vekteam_header__container-icon .list-icon{
+   
+   display: flex;
+   margin: 18px 0;
+ }
+
+ .list-icon icon{
+    margin: 0 4px;
+ }
+ .Vekteam_header__container-icon .icon{
+    color: #fff;
+    padding: 8px 8px;
+    margin-right: 18px;
+    
+ }
+ .Vekteam_header__container-icon .icon:hover{
+    background-color: #2d3238;
+    border-radius: 50%;
+ 
+ }
+ /* CODE CHÍNH */
+ .Vekteam_top__container{
+    padding-top: 66px;
+    height: 240px;
+    background-image: url("https://www.howkteam.vn/Content/images/thumbnails/og-facebook.jpg");
+ }
+ .Vekteam_top__container a:hover{
+      background-color: #4095da;
+ }
+ .Vekteam_top__container h1{
+    margin-top: 60px;
+    margin-left: 40px;
+    color: #fff;
+
+ }
+ .Vekteam_top__container p{
+    margin-left: 40px;
+    color: #fff;
+ }
+
+ .btn{
+    float: right;
+    border: 2px solid transparent;
+     background-color: #1131e2;
+     color: #e7e9ec;
+     text-decoration: none;
+     margin-bottom: 50px;
+     margin-right: 50px;
+     height: 34px;
+     font-weight: 700;
+     line-height: 32px;
+     border-radius: 50%; 
+     padding: 0px 8px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    font-size: 14px;
+
+ }
+ .Vekteam_container_main{
+    font-family: 'Google Sans',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ }
+.Vekteam_container_heal ul{
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    
+}
+.Vekteam_container_heal{
+    text-align: center ;
+    background-color: #e9ecef!important;
+}
+.Vekteam_container_heal ul li{
+    display: inline-block;
+    width: 10%;
+    height: 20%;
+    margin-top: 0;
+    position: relative;
+
+}
+.Vekteam_container_heal li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+}
+.Vekteam_container_heal ul li a:hover{
+    color:#4095da !important;
+}
+.VeKteam_container_mid_vekteam{
+    margin-bottom: 5% ;
+   padding-top: 5%;
+   padding-left: 5%;
+   padding-bottom: 5%;
+   padding-right: 5%;
+    width: 100%;
+    overflow-x: visible;
+    background-color: #ffffff;
+}
+ .h1{
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 2.5rem;
+    color: #171717;
+    font-family: 'Google Sans',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    text-align: center;
+}
+.VeKteam_container_mid_vekteam .h2{
+    margin-bottom: 20px;
+  
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #171717;
+    margin-left: 1%;
+
+}
+
+.VeKteam_container_mid_vekteam p{
+    font-size: 1.2rem;
+    margin-bottom: 5%;
+
+}
+.VeKteam_container_mid_ngsanglap{
+   margin: 3% 3%;
+}
+.VeKteam_container_mid_ngsanglap .h1{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+         color: #171717;
+         margin-bottom: 50px;
+}
+.Vekteam_cac_user{
+    display: flex;
+    align-items: stretch;
+}
+.Vekteam_user{
+    text-align: center !important;
+    overflow-wrap: anywhere;
+    width: 30%;
+   margin: 2%;
+   border-radius: 2%;
+    
+}
+.Vekteam_user_img{
+    transition: opaci   ty .2s ease-out;
+    margin: 0 auto;
+    width: 100%;
+    padding: 18px 18px 1px;
+    padding-bottom: 18px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    overflow-x: visible;
+    background: linear-gradient(135deg,#2095f3 0%,#26c6da 100%);
+}
+.Vekteam_user_img .img-avatar{
+    width: 128px;
+    height: 128px;
+    box-shadow: 0 0 0 5px rgb(255 255 255 / 40%);
+    border-radius: 50%;
+    vertical-align: middle;
+
+}
+.Vekteam_user_p{
+    background-color:  #fbfbfc;
+
+}
+.Vekteam_user_p .h4{
+    font-size: 1rem;
+    font-weight: 700!important;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    color: #171717;
+    margin-top: 5px;
+}
+.Vekteam_user_p  .font-size-sm{
+    font-size: 0.9rem;
+}
+.Vekteam_user_link_bor{
+    display: flex;
+    background-color: #fff;
+    margin: 0 auto;
+    
+}
+.Vekteam_user_link_left{
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  
+
+}
+.Vekteam_user_link{
+   padding-bottom: 20px;
+   height: 100%;
+}
+.Vekteam_user_link_left{
+   margin-right: 10%;
+}
+.Vekteam_user_link_left .Vekteam_user_icon .fab{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 10px;
+   
+}
+.Vekteam_user_link_left .Vekteam_user_linkkkkk{
+    font-weight: 700!important;
+    font-size: .928571rem;
+    overflow-wrap: anywhere;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.Vekteam_user_link_right{
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  
+}
+
+.Vekteam_user_link_right .Vekteam_user_icon{
+   font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 10px;
+}
+.Vekteam_user_link_right .Vekteam_user_linkkkkk{
+    font-weight: 700!important;
+    font-size: .928571rem;
+    overflow-wrap: anywhere;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.VeKteam_container_mid_dichvu_top{
+   display: flex;
+}
+.VeKteam_container_mid_dichvu{
+   background-color: rgb(255, 255, 255);
+  padding-top: 4%;
+  margin-bottom: 5%;
+}
+
+.VeKteam_container_mid_dichvu p{
+      text-align: center;
+      margin-bottom: 3%;
+}
+.VeKteam_container_mid_dichvu_top{
+   margin: 1% 3%;
+}
+.VeKteam_container_mid_dichvu_bot{
+   margin: 1% 3%;
+   display: flex;
+}
+.VeKteam_container_mid_dichvu_colum{
+   width: 30%;
+   margin: 2%;
+   
+}
+
+.VeKteam_container_mid_dichvu_colum_top{
+   display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 5%;
+    transition: opacity .2s ease-out;
+    background-color: #05a520;
+    flex-wrap: wrap;
+}
+h3.block-title.font-w600.text-white {
+   text-align: center;
+}
+
+.VeKteam_container_mid_dichvu_colum_bot{
+   height: 100%;
+}
+.VeKteam_container_mid_dichvu_colum_bot ul{
+   background-color: rgb(243, 241, 241);
+   padding-top: 5%;
+   padding-left: 3%;
+   line-height: 1.5;
+   margin-bottom: 10%;
+}
+.VeKteam_container_mid_dichvu_colum_bot ul li{
+   list-style-position: inside;
+  margin: 0 3%;
+}
+.VeKteam_container_mid_dichvu_colum_bot ul.pl-15 {
+   height: 70%;
+}
+.block-title {
+   flex: 1 1 auto;
+   min-height: 28px  ;
+   margin: 0;
+   font-size: 1.142857rem;
+   line-height: 28px;
+   color: #fff;
+
+}
+
+.Vekteam_container_mid_taitro {
+   text-align: center;
+   height: 300px;
+   background: linear-gradient(135deg,#2095f3 0%,#26c6da 100%)!important;
+}
+.Vekteam_container_mid_taitro .h1{
+   padding-top: 5%;
+   color: #fff;
+}
+.Vekteam_container_mid_taitro p{
+      margin-bottom: 3%;
+      color: #fff;
+}
+.Vekteam_container_mid_taitro a{
+   padding: 14px 70px;
+    font-size: 1rem;
+    line-height:normal;
+    color: #212529;
+    background-color: #f7f7f8;
+    border-radius: 50px;
+   font-weight: bold;
+   text-decoration: none;
+   margin-top: 3%;
+
+}
+.Vekteam_container_mid_taitro a:hover{
+   background-color: #eceaea;
+}
+.Vekteam_container_mid_lienhegopy {
+      text-align: center;
+      height: 250px;
+      padding-top: 5%;
+      margin-bottom: 3%;
+    background-image: url("https://cdn.discordapp.com/attachments/848770765292568604/904408205105446922/Thiet_ke_khong_ten_2.png" );
+}
+.Vekteam_container_mid_lienhegopy p{
+   margin-bottom: 3%;
+
+}
+
+.Vekteam_container_mid_lienhegopy a{
+      background-color: #2c48e4;
+      padding: 14px 70px;
+    font-size: 1rem;
+    line-height:normal;
+    color: #212529;
+    border-radius: 50px;
+   font-weight: bold;
+   text-decoration: none;
+   margin-top: 3%;
+}
+.Vekteam_container_mid_lienhegopy a:hover{
+   background-color: #2095f3;
+}
+
+
+
+
+ .footer{
+    margin-left: 15%;
+    background-color:#ffffff;
+  
+ }
+
+ .footer .logo{
+  margin: 20px 0 20px 20px;
+    height: 60px;
+    display: flex;
+   
+ }
+ .colum{
+    display: flex;
+    
+ }
+ .colum ul{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-right: 10px;
+     padding-left: 10px;
+     font-weight: 400;
+     line-height: 1.5;
+     
+     text-align: left;
+     margin-left: 10px;
+ }
+ .colum p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-right: 10px;
+     padding-left: 10px;
+     font-weight: 400;
+     line-height: 1.5;
+     color: #000000;
+     text-align: left;
+     
+ }
+ .colum li {
+    list-style: none;
+ }
+ 
+ .colum .icon{
+    -webkit-font-smoothing: antialiased;
+     display: inline-block;
+     font-style: normal;
+     font-variant: normal;
+     text-rendering: auto;
+     line-height: 1;
+     font-family: 'Font Awesome 5 Brands';
+     font-size: 2em;
+     margin-left: 25px;
+     margin-bottom: 10px;
+ }
+ .colum li a{
+    color: #575757;
+    text-decoration: none;
+ }
+ .colum li a:hover{
+    color: red;
+ }
+ .colum p{
+    font-size: 16px;
+      font-weight: bold !important;
+ }
+ .colum img{
+    margin-left: 25px;
+ }
+ .mb-10{
+    margin-bottom: 10px!important;
+    margin-left: 10px;
+ }
+ 
+ @import url(http://weloveiconfonts.com/api/?family=entypo);
+ 
+ 
+ @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+ 
+ 
+ 
+ .pagination-container {
+   margin-top: 1em;
+   
+   border-top: 1px solid #d7dadb;
+   border-bottom: 1px solid #d7dadb;;
+   text-align: left;
+   font-size: 10px;
+   
+ }
+ 
+ .pagination-item {
+   list-style-type: none;
+   display: inline-block;
+   border-right: 1px solid #d7dadb;
+   transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
+ }
+ .pagination-item  :active{
+    background-color: red;
+ }
+ 
+ .pagination-item:hover,
+ .pagination-item.is-active {
+       background-color: #fa4248;
+       border-right: 1px solid #fff;
+       
+ }
+ 
+ .pagination-item.first-number {
+   border-left: 1px solid #d7dadb;
+ }
+ 
+ .pagination-link {
+   padding: 1.1em 1.6em;
+   display: inline-block;
+   text-decoration: none;
+   color: #292a2b;
+ 
+   transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(20deg) skewY(0deg);
+ }
+ 
+ .pagination-item--wide {
+ 
+   list-style-type: none;
+   display: inline-block;
+ }
+ 
+ .pagination-item--wide.first {
+   margin: 0 1em 0 0;
+ }
+ 
+ .pagination-item--wide.last {
+   margin: 0 0 0 1em;
+ }
+ 
+ .pagination-link--wide {
+   text-decoration: none;
+   color: #292b2c;
+   padding: 1.1em 1.6em;
+ }
+ 
+ .pagination-link--wide:hover {
+   color: #fa4248;
+ }
+ 
+ .pagination-link--wide.first:before,
+ .pagination-link--wide.last:after {
+   font-family: 'entypo';
+   speak-as: none;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ .pagination-link--wide.first::before {
+   content: "\E765";
+   margin-right: 0.5em;
+ }
+ 
+ .pagination-link--wide.last::after {
+   content: "\E766";
+   margin-left: 0.5em;
+ }
+ 
