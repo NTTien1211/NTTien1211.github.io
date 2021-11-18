@@ -107,7 +107,7 @@
     </div>
    
     <div class="form-register js-form-register">
-        <form class="register__container" action="register_submit.php" method="POST">
+        <form class="register__container" id="form_register" action="register_submit.php" method="POST">
             <div class="register-close">
                 <i class="fas fa-times"></i>
             </div>
@@ -116,26 +116,46 @@
             </header>
 
             <div class="register-body">
-                <label for="name"class="register-label">
-                    Username
-                </label>
-                <input type="text" id="name" name="username" required class="register-input" placeholder="Username">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="name"class="register-label">
+                        Username
+                    </label>
+                    <input type="text" id="name" name="username"  class="register-input" required placeholder="Username">
+                    <span class="form-message"></span>
+                </div>
 
-                <label for="email" class="register-label">
-                    Email
-                </label>
-                <input type="text" id="email" name="email" required class="register-input" placeholder="Email">
+                <div class="form-group " style="margin-bottom: 20px;">
+                    <label for="email" class="register-label">
+                        Email
+                    </label>
+                    <input type="text" id="email" name="email"  class="register-input" required placeholder="Email">
+                    <span class="form-message"></span>
+                </div>
 
-                <label for="matkhau" class="register-label">
-                    Mật khẩu
-                </label>
-                <input type="password" name="password" required id="matkhau" class="register-input" placeholder="Password">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="password" class="register-label">
+                        Mật khẩu
+                    </label>
+                    <input type="password" name="password"  id="password"  class="register-input" required placeholder="Password">
+                    <span class="form-message"></span>
+                </div>
 
-                <label for="nhaplaimatkhau" class="register-label">
-                    Nhập lại mật khẩu
-                </label>
-                <input type="password"  name="repassword" required id="nhaplaimatkhau" class="register-input" placeholder="Retype Password">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="repassword" class="register-label">
+                        Nhập lại mật khẩu
+                    </label>
+                    <input type="password"  name="repassword"  id="repassword"  class="register-input" required  placeholder="Retype Password">
+                    <span class="form-message"></span>
+                </div>
 
+                <p>
+                    <?php
+                    if( isset($_SESSION["thongbao"])){
+                        echo $_SESSION["thongbao"];
+                        session_unset("thongbao");
+                    }
+                    ?>
+                </p>
                 <button id="register-btn" name="submit">
                     Đăng ký
                 </button>
@@ -147,7 +167,31 @@
             </footer>
         </form>
     </div>
+    
+    <script src="./validator.js"></script>
+    <script>
 
+        Validator({
+            form: '#form_register',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequied("#name", 'Vui lòng nhập tên đẩy đủ của bạn'),
+                Validator.isRequied("#email"),
+                Validator.isEmail("#email"),
+                Validator.minLenght("#password",6),
+                Validator.isRequied("#repassword"),
+                Validator.isConfirmed("#repassword", function(){
+                    return document.querySelector('#form_register #password').value;
+                }, 'Mật khẩu nhập lại không chính xác'),
+
+            ],
+
+            onsubmit: function(data){
+
+            }
+
+        });
+    </script>
 
     <script>
         const LoginBtn = document.querySelector('.js-btn-login');

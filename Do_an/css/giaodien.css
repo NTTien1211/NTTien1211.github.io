@@ -325,6 +325,13 @@ button#login-btn:hover{
 .register{
     z-index: 3;
 }
+.form-group.invalid .register-input {
+    border-color: #f33a58;
+  }
+
+  .form-group.invalid .form-message {
+    color: #f33a58;
+  }
 
 .register__container{
     width: 600px;

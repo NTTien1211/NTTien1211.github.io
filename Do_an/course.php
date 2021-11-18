@@ -17,7 +17,7 @@
     $sqll = "select * from $username";
     $resultt=mysqli_query($conn , $sqll);
     $roww = mysqli_fetch_assoc($resultt);
-  
+    $users = mysqli_fetch_all($resultt, MYSQLI_ASSOC);
     
 ?>
 
@@ -27,9 +27,12 @@
 <head>
     <script src="./ckeditor/ckeditor.js"></script>
     <meta charset="UTF-8">
+    <script src="notification.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/coursr.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
@@ -41,7 +44,7 @@
 </style>
 
 <body>
-
+        <div id="toast"></div>
     <div class="main">
 
         <!-- Start Header -->
@@ -50,8 +53,8 @@
                 <img class="img-logo" src="https://www.howkteam.vn/Content/images/logo/kteam_w_70x32.png" alt="">
             </div>
 
-            <div class="header__img-user">
-                <img class="img-user" src="font/img/datbe.jpg" alt="ảnh user">
+            <div class="header__img-user" >          
+                  <img width="30%"  class="img-user"  src="<?php  if(   mysqli_num_rows($resultt) > 0 ) {  echo './images/' . $roww['Anhdaidien'] ;} else{ echo "https://code.itptit.com/assets/images/avatar-none.jpeg";}?>">
                 <p><?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Tenhienthi"];} else{   echo $_SESSION["username"];}     ?></p>
             </div>
             <ul id="nav">
@@ -114,7 +117,7 @@
                         <i class=" icon fas fa-pencil-alt"></i>
                         <i class=" icon far fa-bell"></i>
                         <div class="list-icon-user-menu">
-                                    <img class="img-user" onclick="function_menu()" src="font/img/datbe.jpg" alt="ảnh user">
+                        <img width="30px" class="img-user" onclick="function_menu()" src="<?php  if(   mysqli_num_rows($resultt) > 0 ) {  echo './images/' . $roww['Anhdaidien'] ;} else{ echo "https://code.itptit.com/assets/images/avatar-none.jpeg";}?>" alt="ảnh user">
                                     <div class="icon_noidung_menu_user" id="icon_noidung_menu_user">
                                                 <a href="#" id="js-Thongtincanhan" > <i class="far fa-user" ></i> Thông tin cá nhân</a>
                                                 <form class="logout__container"  action="logout_out.php" action="" method="POST">
@@ -146,7 +149,7 @@
                         <div class="input-group">
                             <input class="input" type="text" placeholder="Tìm khóa học...">
                             <div class="input-search">
-                                <span>
+                                <span   onclick="showErrorToast();">
                                     <i class="icon-search fas fa-search"></i>
                                 </span>
                             </div>
@@ -806,8 +809,8 @@
                                                         <div class="media-body">
                                                             <div class="font-size  " style="color: #6c757d; font-weight: 700; ">Thanh Tien</div>
                                                             <div class=" border ">
-                                                                <div class="b1">
-                                                                    <span class="text-secondary font-w600">Tạo câu hỏi của bạn</span>
+                                                                <div class="b1"  onclick="showErrorToast();">
+                                                                    <span class="text-secondary font-w600"  >Tạo câu hỏi của bạn</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1406,8 +1409,8 @@
                                                 <div class="media-body">
                                                     <div class="font-size  ">Thanh Tien</div>
                                                     <div class=" border "">
-                                                        <div class="b1">
-                                                            <span class="text-secondary font-w600">Chia sẻ bài viết, tài liệu, ...</span>
+                                                        <div class="b1"   onclick="showErrorToast();">
+                                                            <span  class="text-secondary font-w600">Chia sẻ bài viết, tài liệu, ...</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1421,7 +1424,7 @@
                                         <a href="#">
                                             <div class="media">
                                                 <div class="media-left pr-20">
-                                                    <img class="img-user " src="https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/45288287_330554540857063_7698190104497487872_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=iuVihiiIdlQAX8NinFo&_nc_ht=scontent.fhan14-1.fna&oh=9a85cb118e018dbbc753bff2c25ac95f&oe=618E5057">
+                                                    <img class="img-user " src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.6435-9/45288287_330554540857063_7698190104497487872_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=SNktgMCklH4AX__u8Cl&tn=Yte4O01X9Gg_UDxS&_nc_ht=scontent.fsgn2-5.fna&oh=ecc5591f2e243d00e0e245248db9ff87&oe=61B9D1D7">
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="font-size  "> <span style="color: blue;" >Gia Khoi</span>
@@ -1474,7 +1477,7 @@
                                         <a href="#">
                                             <div class="media">
                                                 <div class="media-left pr-20">
-                                                    <img class="img-user " src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/47042257_135221360798637_44909586796249088_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_ohc=dmScHrxDNs0AX-32O2v&tn=TSBfERanHGLWV_TD&_nc_ht=scontent.fhan14-2.fna&oh=25118a9c8d5058f074f305c8867b9140&oe=618CD30F">
+                                                    <img class="img-user " src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.6435-9/68952602_209230070064432_1628113026924150784_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_ohc=RfxBZC7kjP8AX9PYFJ_&_nc_ht=scontent.fsgn2-5.fna&oh=cb6eecb7f9bd5083cf22add03685e664&oe=61BB5B04">
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="font-size  "> <span style="color: blue;" >Đạt bê</span>
@@ -1525,7 +1528,7 @@
                                         <a href="#">
                                             <div class="media">
                                                 <div class="media-left pr-20">
-                                                    <img class="img-user " src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-9/53830229_421577151927784_8157428469010006016_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=174925&_nc_ohc=q7xNlYyqj0AAX8WPM7E&_nc_ht=scontent.fhan2-3.fna&oh=ba5a32e39ce456ed0fa64941102e3e2d&oe=618F7947">
+                                                    <img class="img-user " src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.6435-9/53830229_421577151927784_8157428469010006016_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=174925&_nc_ohc=kLqm_msB_ecAX8_XGa1&_nc_ht=scontent.fsgn2-3.fna&oh=273e531a6cd8c3e184668794a4fa068b&oe=61BAFAC7">
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="font-size  "> <span style="color: blue;" > Vạn Lâm</span>
@@ -1579,7 +1582,7 @@
                                         <a href="#">
                                             <div class="media">
                                                 <div class="media-left pr-20">
-                                                    <img class="img-user " src="https://scontent.fhan2-3.fna.fbcdn.net/v/t1.6435-9/p640x640/97098042_2556852457963018_7479191263967707136_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=174925&_nc_ohc=8NCiIdpg044AX9S2d-e&_nc_ht=scontent.fhan2-3.fna&oh=6435559cd7962634b758c1733cf6f4d7&oe=618F37E3">
+                                                    <img class="img-user " src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.6435-9/97098042_2556852457963018_7479191263967707136_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=174925&_nc_ohc=WVn6E6W7eg4AX8qlo5a&_nc_ht=scontent.fsgn2-4.fna&oh=bcef4e5d8e375956e4bf7877dc148f76&oe=61BB2484">
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="font-size  "> <span style="color: blue;" >trần cường</span>
@@ -1631,7 +1634,7 @@
                                         <a href="#">
                                             <div class="media">
                                                 <div class="media-left pr-20">
-                                                    <img class="img-user " src="https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/244930394_1135606353844179_691423501875441014_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=UJbrdCWHTewAX9smOT0&_nc_ht=scontent.fhan14-1.fna&oh=9477848a2cfc2f67ea4279fe5910a9e9&oe=618FD8DC">
+                                                    <img class="img-user " src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/241449928_1148415272563287_1661619029899612558_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=tNmWOsxvOH8AX9Q7hNX&_nc_ht=scontent.fsgn2-6.fna&oh=167bcdfe7397dad1ff99cb1572982be0&oe=619B7A89">
                                                 </div>
                                                 <div class="media-body">
                                                     <div class="font-size  "> <span style="color: blue;" > Thanh vĩ</span>
@@ -1969,7 +1972,7 @@
                         <div class="input-group input-group--kter">
                             <input class="input" type="text" placeholder="Tìm khóa học...">
                             <div class="input-search">
-                                <span>
+                                <span   onclick="showErrorToast();">
                                     <i class="icon-search fas fa-search"></i>
                                 </span>
                             </div>
@@ -2230,8 +2233,8 @@
                         <h1> Về Kteam</h1>
                        <p>Vì một nền giáo dục miễn phí cho bất kỳ ai, ở bất cứ nơi nào</p>
                     </div>
-                    <div >
-                        <a href="#" class="btn "> <i class="fas fa-plus-circle" style="background-image: linear-gradient(to right,rgb(82, 85, 238),rgb(142, 169, 243));"></i>  Viết bài</a>
+                    <div     >
+                        <a  href="#" class="btn "> <i class="fas fa-plus-circle" style="background-image: linear-gradient(to right,rgb(82, 85, 238),rgb(142, 169, 243));"></i>  Viết bài</a>
                     </div>
                 </div>
                 <div class="VeKteam_container_main">
@@ -2636,7 +2639,7 @@
                             
                             <div class="thongtincanhan_container_main_mid_right-LS">
                                 <p>CHỈNH SỬA HỒ SƠ CỦA BẠN</p> <br> 
-                                <form action="update_data.php" method="post">
+                                <form action="update_data.php" method="post" enctype="multipart/form-data">
                                     <div class="thongtincanhan_container_right_mid">
                                         <h3 style="font-size: 25px; font-weight: 500; margin-bottom: 1%;" > Thông tin cơ bản </h3>
                                             <hr>
@@ -2647,7 +2650,7 @@
                                             <div class="thongtincanhan_container_right_mid_top_right">
                                                 <div class="thongtincanhan_container_right_mid_top_tenhienthi">
                                                     <label for="" class="thongtincanhan_container_right_mid_top_right_chu" > Tên hiển thị</label>
-                                                    <br><input type="text" name="txtTenhienthi" class="frames" placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Tenhienthi"];} else{ echo "Tên hiển thị";}     ?>">
+                                                    <br><input type="text" name="txtTenhienthi" class="frames" placeholder="Tên hiển thị" value="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Tenhienthi"];}    ?>">
                                                 </div>
                                                 <div class="thongtincanhan_container_right_mid_top_ngaysinh">
                                                         <label for="" class="thongtincanhan_container_right_mid_top_right_chu">Ngày sinh</label>
@@ -2665,53 +2668,33 @@
                                                 </div>
                                                 <div class="thongtincanhan_container_right_mid_top_nghenghiep">
                                                         <label for="" class="thongtincanhan_container_right_mid_top_right_chu">Nghề nghiệp</label>
-                                                        <br><textarea  class="frames" name="txtNghenghiep" id="" cols="30" rows="10" placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Nghenghiep"];} else{ echo "....";}     ?>"></textarea>
+                                                        <br><textarea  class="frames" name="txtNghenghiep" id="" cols="30" rows="10" placeholder="Nghề nghiệp"> <?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Nghenghiep"];} else{ echo "....";} ?></textarea>
                                                 </div>
                                                 <div class="thongtincanhan_container_right_mid_top_chuyenmon">
                                                     <label for=""class="thongtincanhan_container_right_mid_top_right_chu">Kỹ năng chuyên môn</label>
-                                                    <br><textarea  class="frames" name="txtChuyenmon" id="" cols="30" rows="10"  placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Kynangchuyenmon"];} else{ echo "....";}     ?>"></textarea>
+                                                    <br><textarea  class="frames" name="txtChuyenmon" id="" cols="30" rows="10"  placeholder="Kỹ năng chuyên môn"><?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Kynangchuyenmon"];} else{ echo "....";}     ?></textarea>
                                             </div>
                                             <div class="thongtincanhan_container_right_mid_top_anhdaidien">
                                                 <div id="direct_upload" class="min-height-150 d-flex border border-2x border-black-op mb-20">
                                                     <label for="" class="thongtincanhan_container_right_mid_top_right_chu">Ảnh đại diện</label>
                                                     <br>  
-                                                    <div class="field" align="left">
-                                                            <input type="file" id="thongtincanhan_files" name="files" onclick="thongtincanhanshow()" multiple />
-                                                    </div>
-                                                    </div>
-                                                    <script type="text/javascript" >
-                                                            $(document).ready(function thongtincanhanshow()  {
-                                                                    if (window.File && window.FileList && window.FileReader) {
-                                                                        $("#thongtincanhan_files").on("change", function(e) {
-                                                                            var files = e.target.files,
-                                                                            filesLength = files.length;
-                                                                        for (var i = 0; i < filesLength; i++) {
-                                                                            var f = files[i]
-                                                                            var fileReader = new FileReader();
-                                                                            fileReader.onload = (function(e) {
-                                                                            var file = e.target;
-                                                                            $("<span class=\"thongtincanhan_pip\">" +
-                                                                                "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
-                                                                                "<br/><span class=\"remove\">Remove image</span>" +
-                                                                                "</span>").insertAfter("#thongtincanhan_files");
-                                                                            $(".remove").click(function(){
-                                                                                $(this).parent(".thongtincanhan_pip").remove();
-                                                                            });
-            
-                                                                            });
-                                                                            fileReader.readAsDataURL(f);
-                                                                        }
-                                                                        });
-                                                                    } else {
-                                                                        alert("Your browser doesn't support to File API")
-                                                                    }
-                                                                    });
-                                                        </script>
+                                                    <span class="thongtincanhan_img-div">
+                                                               
+                                                                <div class="text-center img-placeholder"  onClick="triggerClick()">
+                                                                   
+                                                                </div>
+                                                                
+                                                                
+                                                            <img  class="img-user" src="https://code.itptit.com/assets/images/avatar-none.jpeg" onClick="triggerClick()" id="profileDisplay">
+                                                            </span>
+                                                            <input type="file" name="profileImage" onChange="displayImage(this)" id="profileImage" class="form-control" style="display: none;">
+                                                        </div>
+                                                    
                                                         
                                             </div>
                                             <div class="thongtincanhan_container_right_mid_top_anhdaidien">
                                                 <label for="" class="thongtincanhan_container_right_mid_top_right_chu" style="margin-top: 2%;">Về tôi</label>
-                                                <br><textarea  name="editor" class="ckeditor" id="editor" placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Vetoi"];} else{ echo "....";}     ?>"></textarea>
+                                                <br><textarea  name="editor" class="ckeditor" id="editor" placeholder="Về tôi"><?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Vetoi"];} else{ echo "....";}     ?></textarea>
                                                     <script>
                                                         CKEditor.replace('editor');
                                                     </script>
@@ -2728,11 +2711,11 @@
                                                     <div class=" thongtincanhan_container_right_mid_bot_right">
                                                             <div  class=" thongtincanhan_container_right_mid_bot_right_sodienthoai">
                                                                     <label for=""  class="thongtincanhan_container_right_mid_bot_right_chu">Số điện thoại</label>
-                                                                    <br><input type="text" class="fra mes"  name="txtSodienthoai" id=""placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Sodienthoai"];} else{ echo "Số điện thoại";}     ?>"> 
+                                                                    <br><input type="text" class="frames"  name="txtSodienthoai" id=""placeholder="Số điện thoại" value=" <?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Sodienthoai"];} else{ echo "Số điện thoại";}     ?>">
                                                             </div>
                                                             <div  class=" thongtincanhan_container_right_mid_bot_right_diachi">
                                                                 <label for="" class="thongtincanhan_container_right_mid_bot_right_chu" >Địa chỉ</label>
-                                                                <br><input type="text"  class="frames" name="txtDiachi" id=""  placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Diachi"];} else{ echo "Địa chỉ";}     ?>"> 
+                                                                <br><input type="text"  class="frames" name="txtDiachi" id=""  placeholder="Địa chỉ" value=" <?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Diachi"];} else{ echo "Địa chỉ";}     ?>">
                                                         </div>
                                                         <div  class=" thongtincanhan_container_right_mid_bot_right_website">
                                                             <label for="" class="thongtincanhan_container_right_mid_bot_right_chu"  >Website</label>
@@ -2741,7 +2724,7 @@
                                                                 <span class="input-group-text">
                                                                     <i class="fas fa-link"></i>
                                                                     </span>
-                                                                <input type="text"  class="frames" name="txtWebsite" id="" placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Website"];} else{ echo "Website";}     ?>"">
+                                                                <input type="text"  class="frames" name="txtWebsite" id="" placeholder="Website" value="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Website"];} else{ echo "Website";}     ?>">
                                                             </div>
                                                         </div>
                                                     <div  class=" thongtincanhan_container_right_mid_bot_right_facebook" >
@@ -2751,7 +2734,7 @@
                                                                 <span class="input-group-text">
                                                                     <i class="fab fa-facebook-f"></i>
                                                                     </span>
-                                                                <input type="text"  class="frames" name="txtFacebook" id=""  placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Facebook"];} else{ echo "Facebook";}     ?>"> 
+                                                                <input type="text"  class="frames" name="txtFacebook" id=""  placeholder="Facebook" value="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Facebook"];} else{ echo "Facebook";}     ?>"> 
                                                             </div>
                                                     </div>
                                                     <div  class=" thongtincanhan_container_right_mid_bot_right_email">
@@ -2760,7 +2743,7 @@
                                                                     <span class="input-group-text">
                                                                         <i class="fas fa-envelope"></i>
                                                                         </span>
-                                                                    <input type="text"  class="frames" name="txtEmail" id="" placeholder="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Email"];} else{ echo "Email";}     ?>"> 
+                                                                    <input type="text"  class="frames" name="txtEmail" id="" placeholder="Email" value="<?php   if(   mysqli_num_rows($resultt) > 0 ) {       echo $roww["Email"];} else{ echo "Email";}     ?>"> 
                                                         </div>
                                                 </div>
                                                 
@@ -3040,6 +3023,17 @@
             Page.style.display = 'none';
             Main.style.display = 'block';
         }
+    </script>
+
+    <script>
+         function showErrorToast() {
+                toast({
+                title: "Thất bại!",
+                message: "Hệ thống đang nâng cấp , hẹn gặp bạn vào dịp khác",
+                type: "error",
+                duration: 5000
+                });
+             }
     </script>
 
     <script>
